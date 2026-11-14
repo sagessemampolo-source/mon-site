@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sagesse MAMPOLO – Développeur web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/styles/main.css">
+<link rel="shortcut icon" href="./assets/images/IMG-20260603-WA0171.ico" type="image/x-icon">
+<script>
+  alert("Soyez les bienvenue sur mon site")
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#haut">S.MAMPOLO</a>
+    <nav aria-label="Navigation principale">
+      <a href="#apropos">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Changer de thème">◐</button>
+    </nav>
+  </header>
+
+  <main id="haut">
+    <div class="hero">
+      <p class="hello" id="greeting">Bonjour, je m’appelle</p>
+      <h1><span>Sagesse</span><span>MAMPOLO.</span></h1>
+      <p class="role">Je suis <span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+      <p class="lead">Je conçois des sites rapides, accessibles et faciles à utiliser, pour des associations, des commerces et des projets culturels.</p>
+      <div class="btns">
+        <a class="btn main" href="#projets">Voir mes projets</a>
+        <a class="btn ghost" href="#contact">Me contacter</a>
+      </div>
+    </div>
+
+    <section id="apropos">
+      <h2>À propos</h2>
+      <div class="about">
+        <div>
+          <p>J’ai commencé par bricoler des pages web pour l’association de mon quartier, puis j’en ai fait mon métier. J’aime les interfaces simples, le code lisible et les projets qui servent à quelque chose.</p>
+          <p>Quand je ne code pas, je suis les mangas, je cuisine pour aider ma femme et je joue aux jeux vidéo.</p>
+          <div class="skills" aria-label="Compétences">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+            <span class="chip">React</span><span class="chip">Accessibilité</span><span class="chip">Figma</span>
+          </div>
+        </div>
+        <ul class="facts">
+          <li><span>Métier</span><span>Développeur Web, Programmeur, designeur</span></li>
+          <li><span>Expérience</span><span>1 ans</span></li>
+          <li><span>Langues</span><span>Français, anglais, lingala</span></li>
+          <li><span>Disponibilité</span><span>Par raiservation</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projets">
+      <h2>Projets</h2>
+      <div class="filters" role="group" aria-label="Filtrer les projets">
+        <button type="button" data-f="all" aria-pressed="true">Tous</button>
+        <button type="button" data-f="site" aria-pressed="false">Sites</button>
+        <button type="button" data-f="app" aria-pressed="false">Applications</button>
+      </div>
+      <div class="projects">
+        <article class="project" data-cat="site"><h3>Librairie du Fleuve</h3><p>Vitrine et catalogue pour une librairie indépendante, avec recherche instantanée.</p><span class="tag">Site · HTML, CSS, JS</span></article>
+        <article class="project" data-cat="app"><h3>Mes dépenses</h3><p>Suivi de budget personnel avec graphiques et export en CSV.</p><span class="tag">Application · React</span></article>
+        <article class="project" data-cat="site"><h3>Festival Mbongui</h3><p>Programme interactif d’un festival de musique, lisible hors connexion.</p><span class="tag">Site · PWA</span></article>
+        <article class="project" data-cat="app"><h3>Tournoi d’échecs</h3><p>Gestion des tables et des résultats pour un club de quartier.</p><span class="tag">Application · JavaScript</span></article>
+      </div>
+    </section>
+
+    <section id="parcours">
+      <h2>Parcours</h2>
+      <ul class="timeline">
+        <li><strong>Développeur freelance</strong><span class="date">2027 – aujourd’hui</span>Sites et applications pour des petites structures.</li>
+        <li><strong>Développeur front-end, Agence Pixel</strong><span class="date">2026 – 2027</span>Intégration et accessibilité de sites de marques.</li>
+        <li><strong>Licence en informatique</strong><span class="date">2027 – 2029</span>Spécialité développement web.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="form" novalidate>
+        <label>Votre nom<input name="nom" required autocomplete="name"></label>
+        <label>Votre e-mail<input name="email" type="email" required autocomplete="email"></label>
+        <label>Votre message<textarea name="message" required></textarea></label>
+        <button class="btn main" type="submit">Envoyer le message</button>
+        <p id="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Sagesse MAMPOLO. Tous droits réservés.</footer>
+</div>
+<script src="./assets/animation/action.js"></script>
+</body>
+</html>
